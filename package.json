@@ -2,10 +2,10 @@
   "name": "test_rails",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^4.0.7",
+    "@rails/webpacker": "^5.0.0",
     "vue": "^2.6.10",
-    "vue-loader": "^15.7.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-loader": "^15.10.0",
+    "vue-template-compiler": "^2.7.8"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.7.0"
