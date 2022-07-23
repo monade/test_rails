@@ -13,7 +13,7 @@ tasks:
   - init: >
       bundle install &&
       yarn install &&
-      rake db:create
+      rails db:create db:migrate db:seed
     command: >
       rails server -b 0.0.0.0
 vscode:
