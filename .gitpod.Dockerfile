@@ -1,7 +1,13 @@
-FROM gitpod/workspace-ruby-3.1
+FROM gitpod/workspace-postgres
 USER gitpod
 
-RUN sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && \
-    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && \
-    sudo apt-get update && \
-    sudo apt-get -y install postgresql
+RUN sudo apt install curl git -y && \
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0 && \
+    echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc && \
+    echo ". $HOME/.asdf/completions/asdf.bash" >> ~/.bashrc && \
+    export ASDF_DIR=$HOME/.asdf && \
+    . $HOME/.asdf/asdf.sh && \
+    asdf plugin-add ruby && \
+    asdf plugin-add nodejs && \
+    asdf install ruby 3.1.2 && \
+    asdf install nodejs 16.15.0
