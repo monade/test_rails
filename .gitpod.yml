@@ -11,6 +11,8 @@ ports:
 
 tasks:
   - init: >
+      rvm install 3.1.5 &&
+      rvm use 3.1.5 &&
       source ~/.bashrc &&
       bundle install &&
       yarn install &&
