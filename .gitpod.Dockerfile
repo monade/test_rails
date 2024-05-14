@@ -8,4 +8,7 @@ RUN sudo apt install curl git -y && \
     export ASDF_DIR=$HOME/.asdf && \
     . $HOME/.asdf/asdf.sh && \
     asdf plugin-add nodejs && \
-    asdf install nodejs 16.15.0
+    asdf plugin-add ruby && \
+    asdf install nodejs 16.15.0 && \
+    asdf install ruby 3.2.4 && \
+    asdf reshim ruby
