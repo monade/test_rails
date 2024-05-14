@@ -9,5 +9,7 @@ RUN sudo apt install curl git -y && \
     . $HOME/.asdf/asdf.sh && \
     asdf plugin-add ruby && \
     asdf plugin-add nodejs && \
-    rvm install 3.1.5 && \
-    rvm use 3.1.5
+    asdf install ruby 3.1.5 && \
+    asdf install nodejs 16.15.0 && \
+    asdf global ruby 3.1.5 && \
+    asdf reshim ruby
